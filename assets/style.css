@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(233, 233, 233);
+}
+
+*{
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+header{
+    height: auto;
+    /* min-height: 150px; */
+    background-color: rgb(21, 21, 21);
+    color: white;
+}
+
+
+header .top-bar{
+    max-height: 60px;
+    background-color: rgb(36, 36, 36);
+}
+
+header .top-bar ul{
+    list-style: none;
+}
+header .top-bar ul li{
+     display: inline-block;
+}
+
+header .top-bar{
+    font-size: .95rem;
+}
+
+header .main-menu{
+    font-size: 1.05rem;
+}
+
+nav ul.main-menu li{
+    display: inline-block;
+}
+
+nav .logo img{
+    max-width: 120px;
+    height: 100%
+}
+
+.page-title{
+    min-height: 180px;
+    background-color: rgb(20, 0, 66);
+    background-image: url('https://t4.ftcdn.net/jpg/02/76/08/07/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg');
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: rgb(240, 240, 240);
+}
+
+section{
+    background-color: rgb(21, 21, 21);
+}
+
+section *{
+    color: rgb(240, 240, 240);
+}
+
+section.vh{
+    min-height: calc(100vh - 180px);
+}   
+
+.contact-footer a{
+    text-decoration: none;
+}
