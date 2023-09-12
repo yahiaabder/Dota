@@ -14,10 +14,10 @@ $start =  new \DateTime("2023-09-08 08:08:08" , new \DateTimeZone("Asia/Dubai"))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-if($date >= $start)
+// if($date >= $start)
 $routes->setDefaultController('Home');
-else
-$routes->setDefaultController('Under_maintenance');
+// else
+// $routes->setDefaultController('Under_maintenance');
 
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
@@ -40,7 +40,7 @@ $routes->setAutoRoute(false);
 // route since we don't have to scan directories.
 
 
-if($date >= $start):
+// if($date >= $start):
 $routes->get('/', 'Home::index');
 $routes->add('/contact-us', 'Home::contact_us');
 $routes->add('/about-us', 'Home::who_we_are');
@@ -57,14 +57,24 @@ $routes->add('/user/cr/(:any)', 'User::cr/$1');
 $routes->add('/dota-form/junior', 'User::junior_category');
 $routes->add('/dota-form/senior', 'User::senior_category');
 $routes->add('/dota-form/senior/play', 'User::senior_play');
-$routes->add('/rules', 'Home::rule_and_regulations');
-
-
 $routes->add('/test', 'User::test');
 
-else:
-$routes->add('(:any)', 'Under_maintenance::index');
-endif;
+$routes->add('/rules', 'Home::rule_and_regulations');
+
+// Dashboard
+$routes->add('/admin/dashboard', 'admin\Dashboard::index');
+$routes->add('/admin/account', 'admin\Dashboard::account');
+
+// Admin Login
+$routes->add('/admin/login', 'admin\Login::index');
+$routes->add('/admin/login/check', 'admin\Login::check_login');
+$routes->add('/admin/logout', 'admin\Login::logout');
+// $routes->add('/admin/dashboard', 'admin\Dashboard::index');
+
+
+// else:
+// $routes->add('(:any)', 'Under_maintenance::index');
+// endif;
 
 // $routes->add('/contact-request', 'User::contact_request');
 

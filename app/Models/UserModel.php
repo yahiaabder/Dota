@@ -401,4 +401,20 @@ class UserModel extends Model
     }
 
 
+    // Admin Login
+
+    public function admin_login($username , $password){
+        $sql="select * from admin 
+        WHERE email='$username' 
+        AND password ='$password' 
+        AND status='Active'";
+		$res=$this->customQuery($sql); 
+
+        if($res && sizeof($res) > 0){
+            return $res[0]->admin_id;
+        }
+
+        return false;
+    }
+
 }

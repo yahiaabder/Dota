@@ -36,14 +36,6 @@ Options All -Indexes
 	# Ensure Authorization header is passed along
 	RewriteCond %{HTTP:Authorization} .
 	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
-	# Yahia rewrite rules
-	# RewriteCond %{REQUEST_FILENAME} !-d
-	# RewriteCond %{REQUEST_FILENAME} !f
-	# RewriteCond %{HTTP_HOST} localhost/codeigniter$
-	# RewriteRule (.*) localhost/codeigniter/cat/playstation
-	
-
 </IfModule>
 
 <IfModule !mod_rewrite.c>
@@ -55,9 +47,3 @@ Options All -Indexes
 # Disable server signature start
 	ServerSignature Off
 # Disable server signature end
-
-<Files ".env">
-    Require all denied
-</Files>
-
-
