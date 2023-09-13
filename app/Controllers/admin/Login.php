@@ -139,7 +139,7 @@ class Login extends BaseController{
 				$email->setTo($this->request->getVar("email"));
 				$email->setFrom('info@dota.com', 'Dota');
 				$email->setSubject("Dota admin password reset");
-				$email->setMessage(view("admin/email/Email_admin_pwd_reset") , ["ref" => $ref]);
+				$email->setMessage(view("admin/email/Email_admin_pwd_reset" , ["ref" => $ref]));
 				$email->send();
 				return redirect()->to(site_url("admin/login"))->with("success" , "We have emailed you the reset password link.");
 			}
