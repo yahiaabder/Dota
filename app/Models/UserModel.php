@@ -418,7 +418,7 @@ class UserModel extends Model
     }
 
     public function admin_from_email($email){
-        $req = "select * from admin where email='$email'";
+        $req = "select * from admin where email='".$email."'";
         $res = $this->customQuery($req);
         if($res)
         return $res[0];
