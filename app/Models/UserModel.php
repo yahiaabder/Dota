@@ -417,4 +417,45 @@ class UserModel extends Model
         return false;
     }
 
+    public function admin_from_email($email){
+        $req = "select * from admin where email='$email'";
+        $res = $this->customQuery($req);
+        if($res)
+        return $res[0];
+
+        return false;
+    }
+
+    public function new_admin_pwd_reset($admin_id , $ref){
+        $res = $this->do_action("admin_password_reset" , "" , "" , "insert", ["admin_id"=>$admin_id , "url_ref"=>$ref] , "");
+        if(!$res)
+        return false;
+
+        return true;
+    }
+
+    public function admin_valid_pwd_reset($ref){
+        $req = "select * from admin_password_reset where url_ref='$ref'";
+        $res = $this->customQuery($req);
+
+        if($res){
+            return (is_null($res[0]->updated_at));
+        }
+
+        return false;
+    }
+
+    public function admin_pwd_update($ref , $password){
+        $email = explode($ref , "*-*")[0];
+        $password = base64_encode($password);
+        $req = "update admin set password='$password'";
+        $res = $this->customQuery($req);
+
+        if($res)
+        return true;
+
+        return false;
+
+    }
+
 }

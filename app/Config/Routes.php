@@ -69,6 +69,10 @@ $routes->add('/admin/account', 'admin\Dashboard::account');
 $routes->add('/admin/login', 'admin\Login::index');
 $routes->add('/admin/login/check', 'admin\Login::check_login');
 $routes->add('/admin/logout', 'admin\Login::logout');
+$routes->add('/admin/forgotpwd', 'admin\Login::forgotpassword');
+$routes->add('/admin/resetpwd_request', 'admin\Login::resetpwd_request');
+$routes->add('/admin/update_pwd/(:any)', 'admin\Login::updatepassword/$1');
+$routes->add('/admin/pwd/update/(:any)', 'admin\Login::updatepassword_form/$1');
 // $routes->add('/admin/dashboard', 'admin\Dashboard::index');
 
 

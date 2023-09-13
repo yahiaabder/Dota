@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/bootstrap.min.css">
 
-    <title>DOTA | Sign in</title>
+    <title>DOTA | Admin reset password</title>
 
     <style>
         body {
@@ -24,7 +24,7 @@
         .main {
             background-color: #FFFFFF;
             width: 400px;
-            height: 400px;
+            height: auto;
             /* margin: 15em auto; */
             border-radius: 1.5em;
             box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
@@ -39,11 +39,12 @@
         }
 
         
+
         form.form1 {
             padding-top: 40px;
         }
 
-        .pass , .name {
+        .pass,.name {
             width: 76%;
             color: rgb(38, 50, 56);
             font-weight: 700;
@@ -62,7 +63,6 @@
             margin-bottom: 27px;
             font-family: 'Ubuntu', sans-serif;
         }
-
     
         .name:focus, .pass:focus {
             border: 2px solid rgba(0, 0, 0, 0.18) !important;
@@ -108,7 +108,7 @@
     <div class="container-fluid d-flex justify-content-center align-content-center" style="height: 100vh">
         <div class="row justify-content-center align-content-center">
             <div class="col-12 col-md-8">
-                <?php if($session->getFlashdata("error") && trim($session->getFlashdata("error")) !==""): ?>
+                <?php if($session->getFlashdata("error")): ?>
                     <div class="alert alert-danger" role="alert">
                         <?php 
                             if(is_array($session->getFlashdata("error"))): 
@@ -129,25 +129,13 @@
                     </div>
                 <?php endif; ?>
                 
-                <?php if(isset($username)): ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $username ?>
-                    </div>
-                <?php endif; ?>
-                <?php if(isset($password)): ?>
-                    <div class="alert alert-danger" role="alert">
-                        <?php echo $password ?>
-                    </div>
-                <?php endif; ?>
             </div>
             <div class="main">
-                <p class="sign" align="center">Sign in</p>
-                <form class="form1" method="POST" action="<?php echo base_url() ?>/admin/login/check">
-                    <input class="name" name="username" type="text" align="center" placeholder="Username">
-                    <input class="pass" name="password" type="password" align="center" placeholder="Password">
-                    <button class="submit" align="center" type="submit">Sign in</button>
+                <p class="sign" align="center">Reset password request</p>
+                <form class="form1" method="POST" action="<?php echo base_url() ?>/admin/resetpwd_request">
+                    <input class="pass" name="email" type="text" align="center" placeholder="Admin Email">
+                    <button class="submit" align="center" type="submit">Send</button>
                 </form>
-                <p class="forgot" align="center"><a href="<?php echo base_url() ?>/admin/forgotpwd">Forgot Password?</p>       
             </div>
         </div>
     </div>

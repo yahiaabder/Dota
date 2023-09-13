@@ -108,7 +108,7 @@
     <div class="container-fluid d-flex justify-content-center align-content-center" style="height: 100vh">
         <div class="row justify-content-center align-content-center">
             <div class="col-12 col-md-8">
-                <?php if($session->getFlashdata("error") && trim($session->getFlashdata("error")) !==""): ?>
+                <?php if($session->getFlashdata("error")): ?>
                     <div class="alert alert-danger" role="alert">
                         <?php 
                             if(is_array($session->getFlashdata("error"))): 
@@ -128,7 +128,11 @@
                         <?php echo $session->getFlashdata("success") ?>
                     </div>
                 <?php endif; ?>
-                
+                <?php if($session->getFlashdata("pwd_reset_status") && trim($session->getFlashdata("pwd_reset_status")) !==""): ?>
+                    <div class="alert alert-success" role="alert">
+                        <?php echo $session->getFlashdata("pwd_reset_status") ?>
+                    </div>
+                <?php endif; ?>
                 <?php if(isset($username)): ?>
                     <div class="alert alert-danger" role="alert">
                         <?php echo $username ?>
@@ -141,13 +145,12 @@
                 <?php endif; ?>
             </div>
             <div class="main">
-                <p class="sign" align="center">Sign in</p>
-                <form class="form1" method="POST" action="<?php echo base_url() ?>/admin/login/check">
-                    <input class="name" name="username" type="text" align="center" placeholder="Username">
-                    <input class="pass" name="password" type="password" align="center" placeholder="Password">
-                    <button class="submit" align="center" type="submit">Sign in</button>
+                <p class="sign" align="center">Reset admin password</p>
+                <form class="form1" method="POST" action="<?php echo base_url() ?>/admin/update_pwd/<?php echo $ref ?>">
+                    <input class="pass" name="password1" type="password" align="center" placeholder="Password">
+                    <input class="pass" name="password2" type="password" align="center" placeholder="Confirm Password">
+                    <button class="submit" align="center" type="submit">Confirm</button>
                 </form>
-                <p class="forgot" align="center"><a href="<?php echo base_url() ?>/admin/forgotpwd">Forgot Password?</p>       
             </div>
         </div>
     </div>
