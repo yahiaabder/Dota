@@ -135,12 +135,12 @@ class Login extends BaseController{
 			$ref = base64_encode($this->request->getVar("email")."-*-".$date->getTimestamp());
 
 			if($this->userModel->new_admin_pwd_reset($admin_id , $ref)){
-				// $email = \Config\Services::email();
-				// $email->setTo($this->request->getVar("email"));
-				// $email->setFrom('info@dota.com', 'Dota');
-				// $email->setSubject("Dota admin password reset");
-				// $email->setMessage(view("admin/email/Email_admin_pwd_rest") , $ref);
-				// $email->send();
+				$email = \Config\Services::email();
+				$email->setTo($this->request->getVar("email"));
+				$email->setFrom('info@dota.com', 'Dota');
+				$email->setSubject("Dota admin password reset");
+				$email->setMessage(view("admin/email/Email_admin_pwd_reset") , $ref);
+				$email->send();
 				return redirect()->to(site_url("admin/login"))->with("success" , "We have emailed you the reset password link.");
 			}
 		}
