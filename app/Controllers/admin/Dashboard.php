@@ -9,10 +9,13 @@ class Dashboard extends BaseController{
 
 
     public function __construct(){
-        
+    }
+    
+    public function index(){
+        echo view('admin/Dashboard');
     }
 
-    public function index(){
+    public function academies(){
         $session = session();
         if($session->get("adminLoggedin")){
             $crud = $this->_getGroceryCrudEnterprise();
@@ -22,6 +25,9 @@ class Dashboard extends BaseController{
             $crud->setSubject('Tournament registration' , 'Tournament registrations');
             $crud->columns(["type" , "academy_name" , "academy_email" , "status"]);
             $crud->editFields(["type" , "academy_name" , "academy_email" , "status"]);
+            $crud->setActionButton('See Player(s)', 'fa fa-user', function ($row) {
+                return site_url("admin/players/$row->id");
+            }, true);
     
             $output = $crud->render();
             return $this->_example_output($output);
@@ -63,16 +69,42 @@ class Dashboard extends BaseController{
         }
 
     }
+    public function players($academy = null){
+        $session = session();
+        if(!$session->get("adminLoggedin"))
+        return redirect()->to(site_url("admin/login"));
+
+
+        $crud = $this->_getGroceryCrudEnterprise();
+        // $crud->setCsrfTokenName(csrf_token());
+        // $crud->setCsrfTokenValue(csrf_hash());
+        $crud->setTable('players');
+        $crud->setSubject('Player' , 'Players');
+        $crud->columns(["category" , "play" , "name" , "dob" , "nationality" , "email" , "phone"]);
+        // $crud->editFields(["name" , "email" , "phone" , "password"]);
+        if(!is_null($academy))
+        $crud->where(["registration_id" => $academy]);
+
+        $crud->unsetEdit();
+        $crud->unsetAdd();
+        $crud->unsetDelete();
+        $crud->setRead();
+
+        $output = $crud->render();
+        // var_dump($academy);die();
+        return $this->_example_output($output);
+    }
 
 
     private function _example_output($output = null){
         // var_dump($output);die();
         if ($output->isJSONResponse)
-        {
+        {   
             header('Content-Type: application/json; charset=utf-8');
             echo $output->output;
             exit;
         }
+        // var_dump($output);
         echo view('admin/Dashboard', (array)$output);
     }
 

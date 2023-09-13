@@ -63,7 +63,10 @@ $routes->add('/rules', 'Home::rule_and_regulations');
 
 // Dashboard
 $routes->add('/admin/dashboard', 'admin\Dashboard::index');
+$routes->add('/admin/academies', 'admin\Dashboard::academies');
 $routes->add('/admin/account', 'admin\Dashboard::account');
+$routes->add('/admin/players/(:any)', 'admin\Dashboard::players/$1');
+$routes->add('/admin/players', 'admin\Dashboard::players');
 
 // Admin Login
 $routes->add('/admin/login', 'admin\Login::index');
