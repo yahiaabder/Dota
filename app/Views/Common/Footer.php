@@ -2,19 +2,19 @@
 <footer class="w-100">
         <div class="footer-content py-3 row col-12 justify-content-center m-0">
             <div class="col-12 col-md-7 p-0 ws-footer-menu row justify-content-center m-0 text-center">
-                <div class="col-12 col-md-2 p-3 p-md-0">
+                <div class="col-12 col-md-auto p-3">
                     <a href="<?php echo base_url() ?>">Home</a>
                 </div>
-                <div class="col-12 col-md-2 p-3 p-md-0">
-                    <a href="#">Calendar</a>
+                <div class="col-12 col-md-auto p-3">
+                    <a href="<?php echo base_url() ?>/dota-form">DOTA Registration</a>
                 </div>
-                <div class="col-12 col-md-2 p-3 p-md-0">
+                <div class="col-12 col-md-auto p-3">
                     <a href="<?php echo base_url() ?>/rules">Rules & Regulations</a>
                 </div>
-                <div class="col-12 col-md-2 p-3 p-md-0">
+                <div class="col-12 col-md-auto p-3">
                     <a href="<?php echo base_url() ?>/gallery">Gallery</a>
                 </div>
-                <div class="col-12 col-md-2 p-3 p-md-0">
+                <div class="col-12 col-md-auto p-3">
                     <a href="<?php echo base_url() ?>/contact-us">Contact us</a>
                 </div>
             </div>  
