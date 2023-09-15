@@ -2,7 +2,7 @@
 <?php
     $session = session();
 ?>
-<div class="container-fluid row m-0 align-items-center justify-content-center" style="height: auto">
+<div class="container-fluid row m-0 align-items-center justify-content-center" style="min-height: 80vh">
     <?php if($session->getFlashdata("error")): ?>
     <div class="row col-12 col-lg-6 justify-content-center">
         <div class="alert col-12 alert-warning" role="alert">
@@ -88,14 +88,14 @@
         <input name="type" type="text" value="senior" hidden required>
         <div class="row justify-content-center m-0 col-12 my-2">
             
-            <div class="col-12 col-lg-6 p-3 mx-1 mb-1 mt-0 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u12-b">Under 12 - Cut Off Date : > 2011</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
                     <input name="category[]" type="radio" id="category_men" aria-label="Checkbox for following text input" value="men">
                     <label for="category_men" class="m-0 ml-3"  style="font-size: 1.5rem">Men</label>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 p-3 mx-1 mb-1 mt-0 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u14-b">Under 14 - Cut Off Date : > 2009</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
                     <input name="category[]" type="radio" id="category_women" aria-label="Checkbox for following text input" value="women">

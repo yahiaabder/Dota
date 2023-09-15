@@ -2,7 +2,7 @@
 <div class="container-fluid justify-content-center pt-4">
 
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Proposed Dates:</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Tie Format:</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Scoring: </p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Participants: </p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -45,7 +45,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Courts:</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Age Groups</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Number of Players for Kids League:</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -97,7 +97,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Use of the Entry Fees:</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -118,7 +118,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Entry Deadline:</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">
@@ -128,7 +128,7 @@
         </div>
     </div>
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 " style="color: #4a4424">
             <p class="h4">Fees</p>
         </div>      
         <div class="col-11 col-lg-10 p-2 ws-section-left" id="inter-school-league">

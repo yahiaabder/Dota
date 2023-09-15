@@ -164,7 +164,7 @@
         </div>
         <?php if(false): ?>
         <div class="row m-0 col-12 mb-2 mb-lg-0">
-            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background-color: rgb(12, 150, 69);">
+            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
                     <h2 class="mb-5">INTER SCHOOL LEAGUE </h2>
                     <p class="text-justify">
@@ -185,7 +185,7 @@
             <div class="col-12 col-lg-6 ws-league-img">
                 <div class="overlay"></div>
             </div>
-            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background-color: rgb(12, 150, 69);">
+            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
                     <h2 class="mb-5">NATIONAL DOMESTIC LEAGUE</h2>
                     <p class="text-justify">
@@ -199,7 +199,7 @@
         </div>
 
         <div class="row m-0 col-12 mb-2 mb-lg-0">
-            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background-color: rgb(12, 150, 69);">
+            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
                     <h2 class="mb-5">INTER UNIVERSITY LEAGUE </h2>
                     <p class="text-justify">
@@ -219,7 +219,7 @@
             <div class="col-12 col-lg-6 ws-league-img">
                 <div class="overlay"></div>
             </div>
-            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background-color: rgb(12, 150, 69);">
+            <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
                     <h2 class="mb-5">DOTA</h2>
                     <p class="text-justify">
@@ -309,7 +309,7 @@
                             </div>
                             <div class="col-12 pt-3 row m-0 p-0 justify-content-center">
                                 <a class="col-12" href="<?php echo base_url() ?>/dota-form">
-                                    <button type="button" class="btn col-12" data-bs-dismiss="modal" style="background-color: rgb(12, 150, 69); color:white">Register now</button>
+                                    <button type="button" class="btn col-12" data-bs-dismiss="modal" style="background-color: #a00ec0; color:white">Register now</button>
                                 </a>
                             </div>
                         </div>

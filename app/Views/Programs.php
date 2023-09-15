@@ -1,7 +1,7 @@
 <?php echo view("Common/Page_title" , ["title" => "Our programs"]); ?>
 <div class="container-fluid justify-content-center pt-4">
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #4a4424">
             <p class="h4">INTER SCHOOL LEAGUE</p>
         </div>      
         <div class="col-11 col-lg-10 p-4 ws-section-collapse" id="inter-school-league">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #4a4424">
             <p class="h4">NATIONAL DOMESTIC LEAGUE</p>
         </div>      
         <div class="col-11 col-lg-10 p-4 ws-section-collapse" id="national-domestic-league">
@@ -56,7 +56,7 @@
     </div>
 
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #4a4424">
             <p class="h4">INTER UNIVERSITY LEAGUE</p>
         </div>      
         <div class="col-11 col-lg-10 p-4 ws-section-collapse" id="inter-university-league">
@@ -68,7 +68,7 @@
     </div>
 
     <div class="row justify-content-center my-2">
-        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #2b573a">
+        <div class="col-11 col-lg-10 ws-section-title py-2 ws-section-left" style="color: #4a4424">
             <p class="h4">DOTA</p>
         </div>      
         <div class="col-11 col-lg-10 p-4 ws-section-collapse" id="dota">
