@@ -11,14 +11,14 @@
             <input required type="text" hidden value="<?php echo $_POST["category"][0] ?>" name="category[]">
             <input required type="text" hidden value="<?php echo $_POST["type"] ?>" name="type">
 
-            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #988107; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u12-b">Under 12 - Cut Off Date : > 2011</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
                     <input required name="play" type="radio" id="play_single" aria-label="Checkbox for following text input" value="single">
                     <label for="play_single" class="m-0 ml-3"  style="font-size: 1.5rem">Single</label>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #988107; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u14-b">Under 14 - Cut Off Date : > 2009</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
                     <input required name="play" type="radio" id="play_double" aria-label="Checkbox for following text input" value="double">

@@ -12,13 +12,13 @@
     <?php endif; ?>
 
     <?php if($type == 'junior'): ?>
-    <form method="post" action="<?php echo base_url() ?>/dota-register" class="row justify-content-center col-12 col-md-10 my-3">
+    <form method="post" action="<?php echo base_url() ?>/dota-register" class="row justify-content-center col-12 col-md-10 my-3 p-0 p-lg-2">
         <div class="col-12 px-0 py-3">
             <p class="h3 text-center ">Choose Junior category</p>
         </div>
         <input name="type" type="text" value="junior" hidden required>
         <div class="row justify-content-center m-0 col-12 my-2">
-            <div class="col-12 col-lg-6 m-0 mb-0 bg-dark">
+            <div class="col-12 col-lg-6 m-0 mb-0" style="background-color: #07335f">
                 <p class="text-center h2 m-0 py-2" style="color:white">Boys</p>
             </div>
             <div class="col-12 col-lg-6 p-3 mx-1 mb-1 mt-0 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
@@ -44,8 +44,8 @@
             </div>
         </div>
         <div class="row justify-content-center m-0 col-12 my-2">
-            <div class="col-12 col-lg-6 m-0 mb-0 bg-dark">
-                <p class="text-center h2 bg-dark m-0 py-2" style="color:white">Girls</p>
+            <div class="col-12 col-lg-6 m-0 mb-0" style="background-color: #610951">
+                <p class="text-center h2 m-0 py-2" style="color:white">Girls</p>
             </div>
             <div class="col-12 col-lg-6 p-3 mx-1 mb-1 mt-0 text-center input-group" style="background-color: #a01086; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u12-g">Under 12 - Cut Off Date : > 2011</a> -->
@@ -88,14 +88,14 @@
         <input name="type" type="text" value="senior" hidden required>
         <div class="row justify-content-center m-0 col-12 my-2">
             
-            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #988107; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u12-b">Under 12 - Cut Off Date : > 2011</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
                     <input name="category[]" type="radio" id="category_men" aria-label="Checkbox for following text input" value="men">
                     <label for="category_men" class="m-0 ml-3"  style="font-size: 1.5rem">Men</label>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #988107; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u14-b">Under 14 - Cut Off Date : > 2009</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
                     <input name="category[]" type="radio" id="category_women" aria-label="Checkbox for following text input" value="women">

@@ -538,7 +538,7 @@
 
             .navbar .menu-btn label:hover,
             .navbar #check:checked~.menu-btn label {
-                background-color: #fa8231;
+                background-color: #bea20c;
             }
 
             .navbar .menu-btn label span {
@@ -552,7 +552,7 @@
                 position: fixed;
                 display: block;
                 width: 100%;
-                background-color: #000;
+                background-color: #23012b;
                 height: 0px;
                 transition: all 0.3s ease-in;
                 overflow-y: hidden;
