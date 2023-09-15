@@ -35,6 +35,7 @@
                     <label for="u14-b" class="m-0 ml-3">Under 14 - Cut Off Date : > 2009</label>
                 </div>
             </div>
+            <?php if(false): ?>
             <div class="col-12 col-lg-6 p-3 mx-1 mb-1 mt-0 text-center input-group" style="background-color: #1058a0; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u18-b">Under 18 - Cut Off Date : > 2005</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
@@ -42,6 +43,8 @@
                     <label for="u18-b" class="m-0 ml-3">Under 18 - Cut Off Date : > 2005</label>
                 </div>
             </div>
+            <?php endif; ?>
+
         </div>
         <div class="row justify-content-center m-0 col-12 my-2">
             <div class="col-12 col-lg-6 m-0 mb-0" style="background-color: #610951">
@@ -61,6 +64,7 @@
                     <label for="u14-g" class="m-0 ml-3">Under 14 - Cut Off Date : > 2009</label>
                 </div>
             </div>
+            <?php if(false): ?>
             <div class="col-12 col-lg-6 p-3 mx-1 mb-1 mt-0 text-center input-group" style="background-color: #a01086; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u18-g">Under 18 - Cut Off Date : > 2005</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
@@ -68,6 +72,8 @@
                     <label for="u18-g" class="m-0 ml-3">Under 18 - Cut Off Date : > 2005</label>
                 </div>
             </div>
+            <?php endif; ?>
+
         </div>
         <div class="row justify-content-center m-0 col-12 my-2">
             <div class="form-group row my-3 mx-0 px-0 justify-content-center col-12">

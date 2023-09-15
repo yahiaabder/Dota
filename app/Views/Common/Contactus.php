@@ -43,7 +43,7 @@
             </div>
         </form>
 
-        <div class="col-12 col-lg-8 row justify-content-center my-3" style="font-size: 1.4rem"> 
+        <div class="col-12 col-lg-8 row justify-content-center my-3 ws-contactus-infos" style="font-size: 1.4rem"> 
             <div class="col-12 col-lg-4 text-center row justify-content-between">
 
                 <div class="col-2 mb-2 col-lg-12 p-0 text-center" style="height: 40%">

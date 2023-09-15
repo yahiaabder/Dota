@@ -361,6 +361,13 @@
             .ws-player-form-heading{
                 background-color: #343a40;
             }            
+
+            /* Contact Us Page */
+            .ws-contactus-infos i{
+                color: #a00ec0
+            }
+            /* Contact Us Page */
+
             /* Player form */
             @media screen and (max-width: 800px){
                 .ws-home-social{
