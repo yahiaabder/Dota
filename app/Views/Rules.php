@@ -137,7 +137,7 @@
                     <td>Entry Fee per Boy's Team: 700 AED</td>
                 </tr>
                 <tr>
-                    <td>Entry Fee per Girl's Team: No Fees</td>
+                    <td>Entry Fee per Girl's Team: 700 AED</td>
                 </tr>
                 <tr>
                     <td>Entry Fee for Men's Open (Singles): 250 AED</td>
