@@ -12,6 +12,7 @@
 
     <div class="ws-home w-100">
         <div class="overlay-bright"></div>
+        
         <div class="ws-home-social p-3 d-flex flex-column aling-items-center justify-content-between">
             <div class="p-0 my-3 w-100">
                 <a target="blank" href="http://www.facebook.com/dotauaeofficial">
@@ -29,16 +30,17 @@
                 </a>
             </div> -->
         </div>
+
         <div class="home-welcome d-flex flex-column justify-content-center aling-items-center m-0 p-0">
             <img class="m-0" src="<?php echo base_url() ?>/assets/img/dota_logo.png" alt="">
         </div>
 
         <div class="fly-logo p-3 row m-0 justify-content-between">
-            <div class="flying-logo-2 col-6 p-0 m-0 d-flex justify-content-start">
-                <img src="<?php echo base_url() ?>/assets/uploads/TE-New Logo-01.png" alt="">
+            <div class="flying-logo-2 col-5 col-md-3 align-items-center p-0 m-0 d-flex justify-content-start">
+                <img class="w-100" src="<?php echo base_url() ?>/assets/uploads/TE-New Logo-01.png" alt="">
             </div>
-            <div class="flying-logo-1 col-6 p-0 m-0 d-flex justify-content-end">
-                <img src="<?php echo base_url() ?>/assets/uploads/dubai_sport_council.png" alt="">
+            <div class="flying-logo-1 col-5 col-md-3 align-items-center p-0 m-0 d-flex justify-content-end">
+                <img class="w-100" src="<?php echo base_url() ?>/assets/uploads/dubai_sport_council.png" alt="">
             </div>
         </div>
     </div>
