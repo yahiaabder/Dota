@@ -37,10 +37,10 @@
 
         <div class="fly-logo p-3 row m-0 justify-content-between">
             <div class="flying-logo-2 col-5 col-md-3 align-items-center p-0 m-0 d-flex justify-content-start">
-                <img class="w-100" src="<?php echo base_url() ?>/assets/uploads/TE-New Logo-01.png" alt="">
+                <img class="" src="<?php echo base_url() ?>/assets/uploads/TE-New Logo-01.png" alt="">
             </div>
             <div class="flying-logo-1 col-5 col-md-3 align-items-center p-0 m-0 d-flex justify-content-end">
-                <img class="w-100" src="<?php echo base_url() ?>/assets/uploads/dubai_sport_council.png" alt="">
+                <img class="" src="<?php echo base_url() ?>/assets/uploads/dubai_sport_council.png" alt="">
             </div>
         </div>
     </div>
