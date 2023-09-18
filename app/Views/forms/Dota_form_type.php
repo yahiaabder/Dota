@@ -12,7 +12,7 @@ input.senior-h{
 <div class="container-fluid d-flex align-items-center justify-content-center" style="height: 80vh">
     <div class="row justify-content-center col-12 col-md-10">
         <div class="col-12 col-lg-6 p-3 m-3 text-center" style="background-color: #988107; font-size: 1.5rem">
-            <a href="<?php echo base_url() ?>/dota-form/junior">Junior Registration</a>
+            <a href="<?php echo base_url() ?>/dota-form/junior"><?php echo lg_get_text("lg_71") ?></a>
         </div>
         <!-- <div class="col-12 col-lg-6 p-3 m-3 text-center" style="background-color: #077434; font-size: 1.5rem">
             <form action="<?php echo base_url() ?>/dota-form/senior" method="post">
@@ -21,7 +21,7 @@ input.senior-h{
             </form>
         </div> -->
         <div class="col-12 col-lg-6 p-3 m-3 text-center" style="background-color: #988107; font-size: 1.5rem">
-            <a href="<?php echo base_url() ?>/dota-form/senior">Senior Registration</a>
+            <a href="<?php echo base_url() ?>/dota-form/senior"><?php echo lg_get_text("lg_72") ?></a>
         </div>
     </div>
 </div>

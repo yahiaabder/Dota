@@ -10,7 +10,7 @@
 
 
 
-    <div class="ws-home w-100">
+    <div class="ws-home w-100" <?php content_from_right() ?>>
         <div class="overlay-bright"></div>
         
         <div class="ws-home-social p-3 d-flex flex-column aling-items-center justify-content-between">
@@ -46,23 +46,23 @@
     </div>
 
     <!-- What about us ? -->
-    <div class="ws-wwa container-fluid pb-5">
+    <div class="ws-wwa container-fluid pb-5" <?php content_from_right() ?>>
         <div class="row justify-content-center m-0 aling-items-center p-4">
             <div class="col-12 col-lg-4 p-3 text-center ws-card" style="position:relative; bottom:100px; height: 350px">
                 <div class="ws-card-content p-2 d-flex flex-column justify-content-between">
                     <div class="ws-card-title mb-3">
-                        <h2>WHO WE ARE?</h2>
+                        <h2><?php echo lg_get_text("lg_06") ?></h2>
                     </div>
                     <div class="ws-card-description d-flex aling-items-center">
                         <div>
                             <p>
-                                "Dubai Open Tennis Academies League" - a groundbreaking tournament that brings together the finest young tennis talents from across the globe. This premier event is designed exclusively for tennis academies, offering a unique platform for emerging players to showcase their skills, tenacity, and sportsmanship.
+                                <?php echo lg_get_text("lg_48") ?>
                             </p>
                         </div>
                     </div>
                     <div class="ws-card-button d-flex flex-row justify-content-center">
                         <div class="p-2 col-6">
-                            <a href="<?php echo base_url() ?>/about-us">Read More</a>
+                            <a href="<?php echo base_url() ?>/about-us"><?php echo lg_get_text("lg_07") ?></a>
                         </div>
                     </div>
                 </div>
@@ -74,19 +74,19 @@
     <!-- What sets us apart ? -->
     <div class="container-fluid row justify-content-center pb-5 m-0">
         <div class="row col-12 justify-content-center mb-5">
-            <h2 class="text-center section-title">What Sets Us Apart?</h2>
+            <h2 class="text-center <?php lg_put_text("section-title-l" , "section-title-r" , true) ?>"><?php echo lg_get_text("lg_08") ?></h2>
         </div>
         <div class="row m-0 col-12 col-md-8">
             <div class="owl-carousel owl-theme catpage_bts_slider_2">
                 <div class="item col-12 p-3 text-center ws-card">
                     <div class="ws-card-content d-flex flex-column justify-content-around p-2">
                         <div class="ws-card-title mb-3">
-                            <h2>Education Meets Athletics</h2>
+                            <h2><?php echo lg_get_text("lg_52") ?></h2>
                         </div>
                         <div class="ws-card-description d-flex aling-items-center">
                             <div>
                                 <p>
-                                    We firmly believe in the power of combining academics with sports. The Inter-Academies Tennis League provides a unique opportunity for students to excel not only in the classroom but also on the tennis court.
+                                    <?php echo lg_get_text("lg_56") ?>
                                 </p>
                             </div>
                         </div>
@@ -100,12 +100,12 @@
                 <div class="item col-12 p-3 text-center ws-card">
                     <div class="ws-card-content d-flex flex-column justify-content-around p-2">
                         <div class="ws-card-title mb-3">
-                            <h2>Friendly Competition</h2>
+                            <h2><?php echo lg_get_text("lg_53") ?></h2>
                         </div>
                         <div class="ws-card-description d-flex aling-items-center">
                             <div>
                                 <p>
-                                    Academies from all over the region come together to compete, fostering camaraderie and healthy competition among students. It's a chance for young athletes to represent their schools with pride.
+                                    <?php echo lg_get_text("lg_57") ?>
                                 </p>
                             </div>
                         </div>
@@ -119,12 +119,12 @@
                 <div class="item col-12 p-3 text-center ws-card">
                     <div class="ws-card-content d-flex flex-column justify-content-around p-2">
                         <div class="ws-card-title mb-3">
-                            <h2>Skill Development</h2>
+                            <h2><?php echo lg_get_text("lg_54") ?></h2>
                         </div>
                         <div class="ws-card-description d-flex aling-items-center">
                             <div>
                                 <p>
-                                    Our league isn't just about winning matches; it's about honing skills, setting personal goals, and striving for excellence. Our experienced coaches and mentors are here to guide each player's journey.
+                                    <?php echo lg_get_text("lg_58") ?>
                                 </p>
                             </div>
                         </div>
@@ -138,12 +138,12 @@
                 <div class="item col-12 p-3 text-center ws-card">
                     <div class="ws-card-content d-flex flex-column justify-content-around p-2">
                         <div class="ws-card-title mb-3">
-                            <h2>Lifelong Memories</h2>
+                            <h2><?php echo lg_get_text("lg_55") ?></h2>
                         </div>
                         <div class="ws-card-description d-flex aling-items-center">
                             <div>
                                 <p>
-                                    The Dota Tennis League is a place where unforgettable memories are made. It's about forming friendships, learning life lessons, and creating stories that will be cherished for years to come.
+                                    <?php echo lg_get_text("lg_59") ?>
                                 </p>
                             </div>
                         </div>
@@ -160,15 +160,15 @@
     <!-- What sets us apart ? -->
     
     <!-- Our Leagues -->
-    <div class="container-fluid justify-content-center align-content-start pb-5 row m-0 ws-league">
+    <div class="container-fluid justify-content-center align-content-start pb-5 row m-0 ws-league <?php text_from_right() ?>" <?php content_from_right() ?>>
         <div class="row col-12 justify-content-center mb-5">
-            <h2 class="text-center section-title">Our Leagues</h2>
+            <h2 class="text-center <?php lg_put_text("section-title-l" , "section-title-r" , true) ?>"><?php echo lg_get_text("lg_09") ?></h2>
         </div>
         <?php if(false): ?>
         <div class="row m-0 col-12 mb-2 mb-lg-0">
             <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
-                    <h2 class="mb-5">INTER SCHOOL LEAGUE </h2>
+                    <h2 class="mb-5"><?php echo lg_get_text("lg_12") ?> </h2>
                     <p class="text-justify">
                         The Inter-School Tennis League is a thrilling platform that brings together schools, young athletes, and the exhilarating world of tennis. It's more than just a sports league; it's a celebration of talent, teamwork, and the competitive spirit.
                     </p>
@@ -189,12 +189,12 @@
             </div>
             <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
-                    <h2 class="mb-5">NATIONAL DOMESTIC LEAGUE</h2>
-                    <p class="text-justify">
-                        The National Emirati Citizens Tennis Program is a comprehensive initiative launched by Dubai Sports Council in association With the renowned tennis Player Sania Mirza to promote and develop tennis among Emirati citizens. This program aims to foster a love for tennis, identify and nurture young talent, and ultimately enhance the presence of Emirati players on the international tennis stage.
+                    <h2 class="mb-5"><?php echo lg_get_text("lg_10") ?></h2>
+                    <p class="text-justify <?php text_from_right() ?>">
+                        <?php echo lg_get_text("lg_69") ?>
                     </p>
                     <p>
-                        <u><a href="<?php echo base_url() ?>/programs/#national-domestic-league">Read More...</a></u>
+                        <u><a href="<?php echo base_url() ?>/programs/#national-domestic-league"><?php echo lg_get_text("lg_07") ?>...</a></u>
                     </p>
                 </div>
             </div>
@@ -203,12 +203,12 @@
         <div class="row m-0 col-12 mb-2 mb-lg-0">
             <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
-                    <h2 class="mb-5">INTER UNIVERSITY LEAGUE </h2>
-                    <p class="text-justify">
-                        The Inter-University Tennis League program is a competitive sporting initiative that will bring together universities and colleges to participate in organized tennis competitions.
+                    <h2 class="mb-5"><?php echo lg_get_text("lg_11") ?> </h2>
+                    <p class="text-justify <?php text_from_right() ?>">
+                        <?php echo lg_get_text("lg_70") ?>
                     </p>
                     <p>
-                        <u><a href="<?php echo base_url() ?>/programs/#inter-university-league">Read More...</a></u>
+                        <u><a href="<?php echo base_url() ?>/programs/#inter-university-league"><?php echo lg_get_text("lg_07") ?>...</a></u>
                     </p>
                 </div>
             </div>
@@ -223,12 +223,12 @@
             </div>
             <div class="col-12 col-lg-6 py-5 p-md-5 ws-league-desc d-flex flex-column align-items-center justify-content-center" style="background: linear-gradient(70deg, #a00ec0, #bea20c);">
                 <div class="col-12 col-md-8">
-                    <h2 class="mb-5">DOTA</h2>
-                    <p class="text-justify">
-                        "Dubai Open for Tennis Academies league" - a groundbreaking tournament that brings together the finest young tennis talents from across the globe. This premier event is designed exclusively for tennis academies, offering a unique platform for emerging players to showcase their skills, tenacity, and sportsmanship.
+                    <h2 class="mb-5"><?php echo lg_get_text("lg_13") ?></h2>
+                    <p class="text-justify <?php text_from_right() ?>">
+                        <?php echo lg_get_text("lg_48") ?>
                     </p>
                     <p>
-                        <u><a href="<?php echo base_url() ?>/programs/#dota">Read More...</a></u>
+                        <u><a href="<?php echo base_url() ?>/programs/#dota"><?php echo lg_get_text("lg_07") ?>...</a></u>
                     </p>
                 </div>
             </div>
@@ -238,9 +238,9 @@
     <!-- Our Leagues -->
     
     <!-- Brand Ambassador -->
-    <div class="container-fluid row justify-content-center pb-5 m-0">
+    <div class="container-fluid row justify-content-center pb-5 m-0" <?php content_from_right() ?>>
         <div class="row col-12 justify-content-center mb-5">
-            <h2 class="text-center section-title">Brand Ambassador</h2>
+            <h2 class="text-center <?php lg_put_text("section-title-l" , "section-title-r") ?>"><?php echo lg_get_text("lg_14") ?></h2>
         </div>
         <div class="row m-0 col-12 col-lg-8">
             <div class="col-12 p-3 text-center ws-card">
@@ -253,10 +253,8 @@
                     <div class="ws-card-description d-flex aling-items-center col-12 col-md-6">
                         <div>
                             <p class="text-justify">
-                                <h3>Sania Mirza,</h3>
-                                <p class="text-justify">
-                                The accomplished Indian tennis icon, has taken on the prestigious role of becoming the brand ambassador for the Dubai Open Tennis Academies. With her stellar tennis career and global recognition, Sania brings immense credibility and appeal to this position. Her association underscores the commitment of the Dubai Open Tennis Academies to nurture talent, promote tennis excellence, and elevate the status of the sport in the region. Sania's influence as a role model and her dedication to tennis make her the ideal ambassador to inspire aspiring players and enhance the reputation of the academies as world-class tennis training centers. Her partnership with the Dubai Open Tennis Academies reinforces their commitment to fostering the next generation of tennis champions.
-                                </p>
+                                <h3><?php echo lg_get_text("lg_101") ?></h3>
+                                <p class="text-justify <?php text_from_right() ?>"><?php echo lg_get_text("lg_67") ?></p>
                             </p>
                         </div>
                     </div>
@@ -274,7 +272,7 @@
     <?php if(sizeof($images) > 0): ?>
     <div class="container-fluid row justify-content-center pb-5 m-0">
         <div class="row col-12 justify-content-center mb-5">
-            <h2 class="text-center section-title">Best moments</h2>
+            <h2 class="text-center <?php lg_put_text("section-title-l" , "section-title-r" , true) ?>"><?php echo lg_get_text("lg_15") ?></h2>
         </div>
         <div class="row m-0 col-12 col-lg-10">
             <div class="col-12 ws-gallery-content p-0 text-align-center" id="animated-thumbnails-gallery" style="background-color: transparent">
@@ -311,7 +309,7 @@
                             </div>
                             <div class="col-12 pt-3 row m-0 p-0 justify-content-center">
                                 <a class="col-12" href="<?php echo base_url() ?>/dota-form">
-                                    <button type="button" class="btn col-12" data-bs-dismiss="modal" style="background-color: #a00ec0; color:white">Register now</button>
+                                    <button type="button" class="btn col-12" data-bs-dismiss="modal" style="background-color: #a00ec0; color:white"><?php echo lg_get_text("lg_32") ?></button>
                                 </a>
                             </div>
                         </div>
@@ -319,7 +317,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><?php echo lg_get_text("lg_186") ?></button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><?php echo lg_get_text("lg_31") ?></button>
                 </div>
             </div>
         </div>

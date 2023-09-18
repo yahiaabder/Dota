@@ -60,6 +60,7 @@ $routes->add('/dota-form/senior/play', 'User::senior_play');
 $routes->add('/test', 'User::test');
 
 $routes->add('/rules', 'Home::rule_and_regulations');
+$routes->add('/site/language/(:alpha)', 'System::change_language/$1');
 
 // Dashboard
 $routes->add('/admin/dashboard', 'admin\Dashboard::index');

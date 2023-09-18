@@ -1,4 +1,4 @@
-<?php echo view("Common/Page_title" , ["title" => "Gallery"]) ?>
+<?php echo view("Common/Page_title" , ["title" => lg_get_text("lg_04")]) ?>
 
 <?php 
 // var_dump($year);die();

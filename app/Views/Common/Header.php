@@ -12,6 +12,7 @@
     //     ]
     // );
 
+    if(is_null(get_cookie("language")))
     set_cookie("language" , "EN" , 3600);
 ?>
 
@@ -50,29 +51,33 @@
     <div class="ws-scroll-up p-3 d-flex justify-content-center rounded">
         <i class="fa-solid fa-angle-up"></i>
     </div>
-    <header>
+    <header <?php content_from_right() ?>>
         <div class="header">
-            <div class="navbar d-flex flex-row aling-items-center">
+            <div class="navbar h-100 d-flex flex-row aling-items-center justify-content-between">
                 <input type="checkbox" id="check">
-                <div class="pl-md-4 logo">
+                <div class="col-auto col-md-2 d-flex justify-content-start logo">
                     <a href="<?php echo base_url() ?>">
                         <img class="m-0" src="<?php echo base_url() ?>/assets/img/dota_logo.png" alt="">
                     </a>
                 </div>
-                <div class="menu-btn d-flex p-0">
+                
+                <div class="menu-item col-auto">
+                    <a href="<?php echo base_url() ?>"><?php echo lg_get_text("lg_01") ?></a>
+                    <a href="<?php echo base_url() ?>/dota-form"><?php echo lg_get_text("lg_02") ?></a>
+                    <a href="<?php echo base_url() ?>/rules"><?php echo lg_get_text("lg_03") ?></a>
+                    <a href="<?php echo base_url() ?>/gallery"><?php echo lg_get_text("lg_04") ?></a>
+                    <a href="<?php echo base_url() ?>/contact-us"><?php echo lg_get_text("lg_05") ?></a>
+                </div>
+                <div class="col-auto col-md-2 d-flex justify-content-end lang_select align-items-center">
+                    <i class="fa-sharp fa-solid fa-globe mx-1"></i>
+                    <span onClick="change_language('<?php if(get_cookie("language") == "EN") echo "AR"; else echo "EN"; ?>')"><?php echo lg_get_text("lg_64") ?></span>
+                </div>
+                <div class="menu-btn d-flex d-md-none p-0">
                     <label for="check" class="m-0">
                         <span></span>
                         <span></span>
                         <span></span>
                     </label>
-                </div>
-
-                <div class="menu-item">
-                    <a href="<?php echo base_url() ?>">Home</a>
-                    <a href="<?php echo base_url() ?>/dota-form">DOTA Registration</a>
-                    <a href="<?php echo base_url() ?>/rules">Rules & Regulations</a>
-                    <a href="<?php echo base_url() ?>/gallery">Gallery</a>
-                    <a href="<?php echo base_url() ?>/contact-us">Contact us</a>
                 </div>
             </div>
         </div>

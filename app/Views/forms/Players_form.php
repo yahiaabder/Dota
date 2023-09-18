@@ -42,7 +42,7 @@ switch ($category) {
 ?>
 
 
-<div class="row col-12 p-0 m-0 <?php if($end == 1): echo "justify-content-center"; endif; ?>">
+<div class="row col-12 p-0 m-0 <?php if($end == 1): echo "justify-content-center "; endif;?> " <?php content_from_right() ?>>
     <?php if(isset($category_title)): ?>
     <div class="col-12">
         <p class="h3 py-3"><?php echo $category_title ?></p>
@@ -53,55 +53,55 @@ switch ($category) {
     <div class="col-12 <?php if($end == 1): echo "col-lg-8"; elseif($end == 2): echo "col-lg-6"; else: echo "col-lg-4"; endif; ?> mb-3 px-0 px-md-2 ws-player-form">
         <!-- Players -->
         <div class="col-12 p-0 px-3 mb-4 py-3 ws-player-form-heading">
-            <p class="h-3 m-0" style="color:white">Player <?php echo $i ?></p>
+            <p class="h-3 m-0" style="color:white"><?php echo lg_get_text("lg_91") ?> <?php echo $i ?></p>
         </div>
         <div class="col-12 p-0 px-3 ws-player-form-content">
             <!-- Player Name 1-->
             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['player_'.$i]["name"])) echo $errors["player_".$i]["name"]; ?></p>
-                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_name_<?php echo $i ?>">Full name*</label>
-                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="player_<?php echo $i ?>[name]" id="player_name_<?php echo $i ?>" placeholder="Full name" value="<?php if(isset($data["player_".$i]["name"])) echo $data["player_".$i]["name"]; ?>">
+                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_name_<?php echo $i ?>"><?php echo lg_get_text("lg_92") ?>*</label>
+                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="player_<?php echo $i ?>[name]" id="player_name_<?php echo $i ?>" placeholder="<?php echo lg_get_text("lg_92") ?>" value="<?php if(isset($data["player_".$i]["name"])) echo $data["player_".$i]["name"]; ?>">
             </div>
 
 
             <!-- Player DOB 1 -->
             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['player_'.$i]["dob"])) echo $errors["player_".$i]["dob"]; ?></p>
-                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_dob_<?php echo $i ?>"><?php echo lg_get_text("lg_318")?>*</label>
-                <input required <?php echo $dob_valid ?> class="form-control col-12 <?php text_from_right(true) ?>" type="date" name="player_<?php echo $i ?>[dob]" placeholder="<?php echo lg_get_text("lg_276") ?>" id="player_dob_<?php echo $i ?>" value="<?php if(isset($data["player_".$i]["dob"])) echo $data["player_".$i]["dob"]; ?>">
+                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_dob_<?php echo $i ?>"><?php echo lg_get_text("lg_93")?>*</label>
+                <input required <?php echo $dob_valid ?> class="form-control col-12 <?php text_from_right(true) ?>" type="date" name="player_<?php echo $i ?>[dob]" placeholder="<?php echo lg_get_text("lg_93") ?>" id="player_dob_<?php echo $i ?>" value="<?php if(isset($data["player_".$i]["dob"])) echo $data["player_".$i]["dob"]; ?>">
             </div>
 
             <!-- Player Gender 1 -->
             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['player_'.$i]["gender"])) echo $errors["player_".$i]["gender"]; ?></p>
-                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_gender_<?php echo $i ?>">Gender*</label>                        
+                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_gender_<?php echo $i ?>"><?php echo lg_get_text("lg_94") ?>*</label>                        
                 <select name="player_<?php echo $i ?>[gender]" id="player_gender_<?php echo $i ?>" class="form-control col-12 <?php text_from_right(true) ?>">
-                    <option value="">Player-1 gender</option>
-                    <option value="male" <?php if(isset($data["player_".$i]["gender"]) && $data["player_".$i]["gender"] == "male") echo "selected"; ?>> Male</option>
-                    <option value="female" <?php if(isset($data["player_".$i]["gender"]) && $data["player_".$i]["gender"] == "female") echo "selected" ?>> Female</option>
+                    <option value=""><?php echo lg_get_text("lg_102") ?></option>
+                    <option value="male" <?php if(isset($data["player_".$i]["gender"]) && $data["player_".$i]["gender"] == "male") echo "selected"; ?>> <?php echo lg_get_text("lg_95") ?></option>
+                    <option value="female" <?php if(isset($data["player_".$i]["gender"]) && $data["player_".$i]["gender"] == "female") echo "selected" ?>> <?php echo lg_get_text("lg_96") ?></option>
                 </select>
             </div>
 
             <!-- Player Email 1 -->
             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['player_'.$i]["email"])) echo $errors["player_".$i]["email"]; ?></p>
-                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_email_<?php echo $i ?>">Email ID*</label>
-                <input class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="player_<?php echo $i ?>[email]" placeholder="<?php echo lg_get_text("lg_276") ?>" id="player_email_<?php echo $i ?>" value="<?php if(isset($data["player_".$i]["email"])) echo $data["player_".$i]["email"];?>">
+                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_email_<?php echo $i ?>"><?php echo lg_get_text("lg_97") ?>*</label>
+                <input class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="player_<?php echo $i ?>[email]" placeholder="<?php echo lg_get_text("lg_97") ?>" id="player_email_<?php echo $i ?>" value="<?php if(isset($data["player_".$i]["email"])) echo $data["player_".$i]["email"];?>">
             </div>
 
             <!-- Player Phone 1 -->
             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['player_'.$i]["phone"])) echo $errors["player_".$i]["phone"]; ?></p>
-                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_phone_<?php echo $i ?>">Phone*</label>
-                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="tel" name="player_<?php echo $i ?>[phone]" placeholder="<?php echo lg_get_text("lg_274") ?>: +971520000000" id="player_phone_<?php echo $i ?>" value="<?php if(isset($data["player_".$i]["phone"])) echo $data["player_".$i]["phone"];?>">
+                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_phone_<?php echo $i ?>"><?php echo lg_get_text("lg_18") ?>*</label>
+                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="tel" name="player_<?php echo $i ?>[phone]" placeholder="<?php echo lg_get_text("lg_18") ?>: +971520000000" id="player_phone_<?php echo $i ?>" value="<?php if(isset($data["player_".$i]["phone"])) echo $data["player_".$i]["phone"];?>">
             </div>
 
             <!-- Player Nationality 1 -->
             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['player_'.$i]["nationality"])) echo $errors["player_".$i]["nationality"]; ?></p>
-                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_nationality_<?php echo $i ?>">Nationality*</label>                        
+                <label class="form-label col-12 mb-2 px-0 <?php text_from_right(true) ?>" for="player_nationality_<?php echo $i ?>"><?php echo lg_get_text("lg_98") ?>*</label>                        
                 <select name="player_<?php echo $i ?>[nationality]" id="player_nationality_<?php echo $i ?>" class="form-control col-12 <?php text_from_right(true) ?>">
-                    <option value="">Choose player-1 nationality</option>
+                    <option value=""><?php echo lg_get_text("lg_99")." ".lg_get_text("lg_91")."-".$i." ".lg_get_text("lg_98") ?></option>
                     <?php 
                         foreach($countries as $country): 
                     ?>

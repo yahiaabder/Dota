@@ -20,6 +20,18 @@ function form_filled(form){
     }
 }
 
+
+// Change language function 
+function change_language(code){
+    $.post(base_url+"/site/language/"+code , {} , function(data){
+        data = JSON.parse(data)
+        if(data["status"] == 1)
+        location.reload()
+    })
+}
+// Change language function 
+
+
 $(document).ready(function(){
 
     form_filled($("#ws-register-form"))
@@ -92,5 +104,5 @@ $(document).ready(function(){
         $("#generalmodal").modal("show")
     }
     // Modal NS notification 
-
+    
 })

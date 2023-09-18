@@ -18,9 +18,19 @@
         "u14-g" => "Under 14 - Cut Off Date : > 2009 (Girls)", 
         "u18-g" => "Under 18 - Cut Off Date : > 2005 (Girls)", 
     ];
+    $categories_title_ar = [
+        "u12-b" => "تحت 12 سنة - تاريخ التوقف: > 2011 (ذكور)", 
+        "u14-b" => "تحت 14 سنة - تاريخ التوقف: > 2009 (ذكور)", 
+        "u18-b" => "أقل من 18 عامًا - تاريخ التوقف: > 2005 (ذكور)", 
+        "u12-g" => "تحت 12 سنة - تاريخ التوقف: > 2011 (بنات)", 
+        "u14-g" => "تحت 14 سنة - تاريخ التوقف: > 2009 (بنات)", 
+        "u18-g" => "أقل من 18 عامًا - تاريخ التوقف: > 2005 (بنات)", 
+    ];
+
+    
 
 
-    // var_dump($data , $_POST); 
+    // var_dump(dictionary()); die();
 
 ?>
 
@@ -111,9 +121,9 @@
 
 </style>
 
-<?php echo view("Common/Page_title" , ["title" => "Registration form"]) ?>
+<?php echo view("Common/Page_title" , ["title" => lg_get_text("lg_86")]) ?>
 
-<div class="container-fluid row m-0 align-content-center py-3">
+<div class="container-fluid row m-0 align-content-center py-3 <?php text_from_right(true) ?>">
     
         
     
@@ -150,21 +160,21 @@
                     
                     <div class="col-12 mb-5 px-0">
                         <div class="col-12 bg-dark">
-                            <p class="text-center py-3 h3" style="color:white"><?php if(isset($data["type"])) echo ucfirst($data["type"]); else echo ucfirst($_POST["type"]) ?></p>
+                            <p class="text-center py-3 h3" style="color:white"><?php if(isset($data["type"])) echo ucfirst(lg_put_text($data["type"] , dictionary()[$data["type"]] , false)); else echo ucfirst(lg_put_text($_POST["type"] , dictionary()[$_POST["type"]] , false)) ?></p>
                         </div>
                         <input type="text" value="<?php if(isset($data["type"])) echo $data["type"]; else echo $_POST["type"] ?>" name="type" hidden>
                         <!-- Name of the academy-->
                             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['academy_name'])) echo $errors["academy_name"]; ?></p>
-                                <label class="form-label col-12 mb-3 px-0 <?php text_from_right(true) ?>" for="academy_name">Academy name*</label>
-                                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="academy_name" id="academy_name" placeholder="Academy name" value="<?php if(isset($data["academy_name"])) echo $data["academy_name"]; ?>">
+                                <label class="form-label col-12 mb-3 px-0 <?php text_from_right(true) ?>" for="academy_name"><?php echo lg_get_text("lg_87") ?>*</label>
+                                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="academy_name" id="academy_name" placeholder="<?php echo lg_get_text("lg_87") ?>" value="<?php if(isset($data["academy_name"])) echo $data["academy_name"]; ?>">
                             </div>
 
                         <!-- email of the academy-->
                             <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
                                 <p class="err-msg col-12 col-md-auto p-0" style="color:red"><?php if(isset($errors['academy_email'])) echo $errors["academy_email"]; ?></p>
-                                <label class="form-label col-12 mb-3 px-0 <?php text_from_right(true) ?>" for="academy_email">Academy email*</label>
-                                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="academy_email" id="academy_email" placeholder="Academy email" value="<?php if(isset($data["academy_email"])) echo $data["academy_email"]; ?>">
+                                <label class="form-label col-12 mb-3 px-0 <?php text_from_right(true) ?>" for="academy_email"><?php echo lg_get_text("lg_88") ?>*</label>
+                                <input required class="form-control col-12 <?php text_from_right(true) ?>" type="text" name="academy_email" id="academy_email" placeholder="<?php echo lg_get_text("lg_88") ?>" value="<?php if(isset($data["academy_email"])) echo $data["academy_email"]; ?>">
                             </div>
                         <!-- Categories -->
                         <div class="form-group row mt-0 mx-0 px-0 j-c-center col-12">
@@ -202,13 +212,13 @@
                     <?php 
                         if(((isset($_POST["type"]) && $_POST["type"] == "senior") || (isset($data["type"]) && $data["type"] == "senior")) && (isset($_POST["play"]) || isset($data["play"]))){
                             $end = (isset($data["play"])) ? $data["play"] : $_POST["play"];
-                            $title = (isset($data["category"][0])) ? ucfirst($data["category"][0]) . " (".$end.")" : ucfirst($_POST["category"][0]) . " (".$end.")";;
+                            $title = (isset($data["category"][0])) ? ucfirst(lg_put_text($data["category"][0] , dictionary()[$data["category"][0]] , false)) . " (".lg_put_text($end , dictionary()[$end] , false).")" : ucfirst(lg_put_text($_POST["category"][0] , dictionary()[$_POST["category"][0]] , false)) . " (".lg_put_text($end , dictionary()[$end] , false).")";
                             $play = (isset($data["play"])) ? $data["play"] : $_POST["play"];
                             echo view("forms/Players_form" , ["errors" => $errors , "data" => $data , "nbr" => 1 , "start" => 1 , "end" => ($end == "single") ? 1 : 2 , "category_title" => $title , "category" => $_POST["category"][0] , "play" => $play , "countries" => $countries]);
                         }
                         elseif(isset($categories)){
                             foreach($categories as $key => $value):
-                                echo view("forms/Players_form" , ["errors" => $errors , "data" => $data , "start" => $key*6+1 , "end" => $key*6+6 , "category_title" => $categories_title[$value] , "category" => $value , "countries" => $countries]);
+                                echo view("forms/Players_form" , ["errors" => $errors , "data" => $data , "start" => $key*6+1 , "end" => $key*6+6 , "category_title" => lg_put_text($categories_title[$value] , $categories_title_ar[$value] , false) , "category" => $value , "countries" => $countries]);
                             endforeach;
                         }
                         
@@ -231,12 +241,12 @@
                 </div>
                 <div class="col-12">
                     <p>
-                        <b>Note :</b> After the Form Submission , Our Operations Team will contact the applicant for further necessary requisite.
+                        <?php echo lg_get_text("lg_89") ?>
                     </p>
                 </div>
 
                 <div class="form-group row my-3 mx-0 px-0 justify-content-center col-12">
-                    <input class="py-2 col-lg-3 col-sm-12 mx-2 form-control" value="Submit" type="submit"></input>
+                    <input class="py-2 col-lg-3 col-sm-12 mx-2 form-control" value="<?php echo lg_get_text("lg_90") ?>" type="submit"></input>
                 </div>
 
             </form>
