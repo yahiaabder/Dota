@@ -117,7 +117,7 @@ function lg_get_text($txt_code){
             "lg_73" => "Men",
             "lg_74" => "Women",
             "lg_75" => "Next",
-            "lg_76" => "Choose gender",
+            "lg_76" => "Choose category",
             "lg_77" => "Choose Junior category",
             "lg_78" => "Boys",
             "lg_79" => "Under 12 - Cut Off Date : > 2011",
@@ -144,7 +144,13 @@ function lg_get_text($txt_code){
             "lg_100" => "About us",    
             "lg_101" => "Sania Mirza,",    
             "lg_102" => "Select gender",    
-            "lg_103" => "ZGames",    
+            "lg_103" => "Women 35+",    
+            "lg_104" => "Men 35+",    
+            "lg_105" => "ZGames",    
+            "lg_106" => "ZGames",    
+            "lg_107" => "ZGames",    
+            "lg_108" => "ZGames",    
+            "lg_109" => "ZGames",    
 
             
         ),
@@ -252,7 +258,7 @@ function lg_get_text($txt_code){
             "lg_73" => "رجال",
             "lg_74" => "سيدات",
             "lg_75" => "التالي",
-            "lg_76" => "إخير الجنس",
+            "lg_76" => "اختر الفئة",
             "lg_77" => "إختر فئة الناشئين",
             "lg_78" => "ذكور",
             "lg_79" => "أقل من 12 عامًا - تاريخ التوقف: > 2011",
@@ -279,6 +285,13 @@ function lg_get_text($txt_code){
             "lg_100" => "معلومات عنا",
             "lg_101" => "صانيا ميراز",
             "lg_102" => "قم بتحديد الجنس",
+            "lg_103" => "سيدات 35+",
+            "lg_104" => "رجال 35+",
+            "lg_105" => "",
+            "lg_106" => "",
+            "lg_107" => "",
+            "lg_108" => "",
+            "lg_109" => "",
     
         )
     );
@@ -360,7 +373,6 @@ if(!function_exists("text_from_left")){
 
 }
 
-
 if(!function_exists("content_reversed")){
 
     function content_reversed(){
@@ -378,7 +390,6 @@ if(!function_exists("content_reversed")){
     }
 
 }
-
 
 if(!function_exists("lg_put_text")){
     function lg_put_text($eng_text , $ara_text , $echo=true){
@@ -409,6 +420,7 @@ if(!function_exists("lg_put_text")){
          
     }
 }
+
 if(!function_exists("disctionary")){
     function dictionary(){
         $dictionary = [
@@ -416,6 +428,8 @@ if(!function_exists("disctionary")){
             "double" => "زوجي",
             "women" => "نساء",
             "men" => "رجال",
+            "men-35-plus" => "رجال أكبر من 35",
+            "women-35-plus" => "سيدات أكبر من 35",
             "senior" => "كبار",
             "junior" => "الناشئين",
         ];
@@ -424,9 +438,3 @@ if(!function_exists("disctionary")){
     }
          
 }
-
-
-
-
-
-?>

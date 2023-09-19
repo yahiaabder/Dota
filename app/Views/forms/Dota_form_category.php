@@ -104,8 +104,23 @@
             <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #988107; font-size: 1.2rem">
                 <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u14-b">Under 14 - Cut Off Date : > 2009</a> -->
                 <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
+                    <input name="category[]" type="radio" id="category_men_35_plus" aria-label="Checkbox for following text input" value="men-35-plus">
+                    <label for="category_men_35_plus" class="m-0 <?php if(get_cookie("language") == "EN") echo 'ml-3'; else echo 'mr-3' ?>"  style="font-size: 1.5rem"><?php echo lg_get_text("lg_104") ?></label>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #988107; font-size: 1.2rem">
+                <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u14-b">Under 14 - Cut Off Date : > 2009</a> -->
+                <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
                     <input name="category[]" type="radio" id="category_women" aria-label="Checkbox for following text input" value="women">
                     <label for="category_women" class="m-0 <?php if(get_cookie("language") == "EN") echo 'ml-3'; else echo 'mr-3' ?>"  style="font-size: 1.5rem"><?php echo lg_get_text("lg_74") ?></label>
+                </div>
+            </div>
+            
+            <div class="col-12 col-lg-6 p-1 m-3 text-center input-group" style="background-color: #988107; font-size: 1.2rem">
+                <!-- <a href="<?php echo base_url() ?>/dota-register?type=junior&category=u14-b">Under 14 - Cut Off Date : > 2009</a> -->
+                <div class="input-group-text justify-content-around" style="background-color:transparent; color:white; border:none">
+                    <input name="category[]" type="radio" id="category_women_35_plus" aria-label="Checkbox for following text input" value="women-35-plus">
+                    <label for="category_women_35_plus" class="m-0 <?php if(get_cookie("language") == "EN") echo 'ml-3'; else echo 'mr-3' ?>"  style="font-size: 1.5rem"><?php echo lg_get_text("lg_103") ?></label>
                 </div>
             </div>
             <div class="row justify-content-center m-0 col-12 my-2">

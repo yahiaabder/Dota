@@ -56,7 +56,7 @@ class User extends BaseController
 
                 "category" => [
                     "label" => "Player category",
-                    "rules" => "required|in_list[u18-b,u14-b,u12-b,u12-g,u14-g,u18-g,men,women]",
+                    "rules" => "required|in_list[u18-b,u14-b,u12-b,u12-g,u14-g,u18-g,men,women,men-35-plus,women-35-plus]",
                     "errors" => [
                         "in_list" => "player category incorrect"
                     ],
@@ -200,9 +200,9 @@ class User extends BaseController
 
                         // Send Confirmation email
                         $content= view("email/Tr_reg_confirmation" , ["title" => "Dota tournament" , "academy_name" => $form["academy_name"] , "c_code" => $c_code]);
-                        if($this->email_confirmation( $form["academy_email"] , $content , "DOTA Tournament | Confirm registration"))
+                        // if($this->email_confirmation( $form["academy_email"] , $content , "DOTA Tournament | Confirm registration"))
                         $notif= view("email/Registration_notification" , ["form" => $form]);
-                        if($this->email_confirmation( "info@dota.ae" , $notif , "DOTA Tournament | Academy registration") )
+                        // if($this->email_confirmation( "info@dota.ae" , $notif , "DOTA Tournament | Academy registration") )
                         if(true)
                         $this->form_registration([ "success" => true , "message" => "Thank you <b>".$form["academy_name"]."</b> for your intrest, an email was sent to <b>".$form["academy_email"]."</b> to confirm your registration." ]);
                     }

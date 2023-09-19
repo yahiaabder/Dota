@@ -154,7 +154,7 @@
                 </div>
             <?php endif; ?>
             
-            <form action="<?php echo base_url() ?>/user/register" method="post" id="ws-register-form" class="row j-c-center p-0 m-0 col-12 col-lg-11 px-0 register-form-preorder <?php content_from_right() ?>">
+            <form action="<?php echo base_url() ?>/user/register" method="post" id="ws-register-form" class="row j-c-center p-0 m-0 col-12 col-lg-11 px-0 register-form-preorder" <?php content_from_right() ?>>
 
                 <div class="row px-0 col-12 m-0 my-0 j-c-center">
                     
