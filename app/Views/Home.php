@@ -48,7 +48,7 @@
     <!-- What about us ? -->
     <div class="ws-wwa container-fluid pb-5" <?php content_from_right() ?>>
         <div class="row justify-content-center m-0 aling-items-center p-4">
-            <div class="col-12 col-lg-4 p-3 text-center ws-card" style="position:relative; bottom:100px; height: 350px">
+            <div class="col-12 col-lg-4 p-3 text-center ws-card" style="position:relative; margin-top: -100px; height: 350px">
                 <div class="ws-card-content p-2 d-flex flex-column justify-content-between">
                     <div class="ws-card-title mb-3">
                         <h2><?php echo lg_get_text("lg_06") ?></h2>

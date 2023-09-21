@@ -44,8 +44,8 @@ $(document).ready(function(){
         $(this).siblings(".ws-section-collapse").toggle()
     })
 
-    $(".ws-wwa").css({height : $(".ws-wwa").outerHeight()-100})
-    $(".ws-wwa > div").css({height : $(".ws-wwa > div").outerHeight()-100})
+    // $(".ws-wwa").css({height : $(".ws-wwa").outerHeight()-100})
+    // $(".ws-wwa > div").css({height : $(".ws-wwa > div").outerHeight()-100})
 
     //   loading gallery page
     $('#animated-thumbnails-gallery').lightGallery();
