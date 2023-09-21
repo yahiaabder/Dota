@@ -275,7 +275,7 @@
             <h2 class="text-center <?php lg_put_text("section-title-l" , "section-title-r" , true) ?>"><?php echo lg_get_text("lg_15") ?></h2>
         </div>
         <div class="row m-0 col-12 col-lg-10">
-            <div class="col-12 ws-gallery-content p-0 text-align-center" id="animated-thumbnails-gallery" style="background-color: transparent">
+            <div class="col-12 ws-gallery-content p-0 text-align-center" id="home-animated-thumbnails-gallery" style="background-color: transparent">
                 <?php 
                 $i=0; 
                 foreach($images as $image): 

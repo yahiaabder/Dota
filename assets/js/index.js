@@ -50,30 +50,44 @@ $(document).ready(function(){
     //   loading gallery page
     $('#animated-thumbnails-gallery').lightGallery();
     $("#animated-thumbnails-gallery").justifiedGallery({
-      captions: false,
-      lastRow: "hide",
-      rowHeight: 180,
-      margins: 25
-    }).on("jg.complete", function () {
-        window.lightGallery(document.getElementById("animated-thumbnails-gallery"), {
-            autoplayFirstVideo: false,
-            pager: false,
-            galleryId: "Gallery",
-            plugins: [lgZoom, lgThumbnail],
-            mobileSettings: {
-                controls: false,
-                showCloseIcon: false,
-                download: false,
-                rotate: false
-            }
-        }
-        );
+        captions: false,
+        lastRow: "hide",
+        rowHeight: 180,
+        margins: 25
+      }).on("jg.complete", function () {
+          window.lightGallery(document.getElementById("animated-thumbnails-gallery"), {
+              autoplayFirstVideo: false,
+              pager: false,
+              galleryId: "Gallery",
+              plugins: [lgZoom, lgThumbnail],
+              mobileSettings: {
+                  controls: false,
+                  showCloseIcon: false,
+                  download: false,
+                  rotate: false
+              }
+          }
+          );
+      });
+    //   loading gallery page
+
+    // Loading Home Galley section
+    $('#home-animated-thumbnails-gallery').lightGallery({
+        selector: "lg_dota_item"
     });
+     $("#home-animated-thumbnails-gallery").justifiedGallery({
+        captions: false,
+        lastRow: "hide",
+        rowHeight: 180,
+        margins: 10
+      })
+      $('#home-animated-thumbnails-gallery').on('click', '.lg-item', function(e) {
+        e.preventDefault();
+     });
+    // Loading Home Galley section
 
 
-
-
-
+    //  Player form filling interaction
     $(".ws-player-form-content input , .ws-player-form-content select , .ws-player-form-content textarea").blur(function(){
         bool = true
         $(this).parents(".ws-player-form-content").find(":is(input,textarea,select)").each(function(index , element){
@@ -88,15 +102,7 @@ $(document).ready(function(){
         $(this).parents(".ws-player-form-content").siblings(".ws-player-form-heading").css({"background-color": "#343a40"})
 
     })
-
-
-
-    $("#ws-register-form").submit(function(e){
-        // e.preventDefault()
-
-        data =$(this).serialize()
-        console.log(data)
-    })
+    //  Player form filling interaction
 
 
     // Modal NS notification
