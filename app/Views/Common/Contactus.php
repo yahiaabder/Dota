@@ -1,6 +1,7 @@
 <?php 
 
     // $errors = ["user name invalid" , "email not correct" , "Phone number is user"];
+    // var_dump($settings);die();
 ?>
 
 <div class="container-fluid p-0 m-0 row justify-content-center align-content-start" <?php content_from_right() ?>>
@@ -48,7 +49,7 @@
                     <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="col-10 col-lg-12 p-0 text-center" style="height: 60%">
-                    <p style="font-size: 18px"><a style="color: black!important" href="tel:+971551336697" dir="ltr">+971 55 133 6697</a></p>
+                    <p style="font-size: 18px"><a style="color: black!important" href="tel:<?php echo str_replace(' ', '', $settings->phone) ?>" dir="ltr"><?php echo $settings->phone ?></a></p>
                 </div>
 
             </div>
@@ -59,7 +60,10 @@
                     <i class="fa-solid fa-envelope"></i>
                 </div>
                 <div class="col-10 col-lg-12 p-0 text-center" style="height: 60%">
-                    <p style="font-size: 18px">contact@dota.ae</p>
+                    <p class="mb-0" style="font-size: 18px"><?php echo $settings->email ?></p>
+                    <?php if(trim($settings->email_2) !== ""): ?>
+                    <p style="font-size: 18px"><?php echo $settings->email_2 ?></p>
+                    <?php endif; ?>
                 </div>
 
             </div>
@@ -70,7 +74,7 @@
                     <i class="fa-sharp fa-solid fa-location-dot"></i>
                 </div>
                 <div class="col-10 col-lg-12 p-0 text-center" style="height: 60%">
-                    <p style="font-size: 18px"><?php echo lg_get_text("lg_68") ?></p>
+                    <p style="font-size: 18px"><?php echo lg_put_text($settings->address , $settings->address_arabic) ?></p>
                 </div>
 
             </div>

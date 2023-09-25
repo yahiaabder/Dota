@@ -27,7 +27,8 @@
                 <div class="sidebar-head">
                     <a href="<?php echo site_url() ?>" target="blank" class="logo-wrapper" title="Home">
                         <span class="sr-only">Home</span>
-                        <span class="icon logo" aria-hidden="true"></span>
+                        <!-- <span class="icon logo" aria-hidden="true"></span> -->
+                        <img src="<?php echo base_url()."/assets/uploads/".$settings->logo ?>" class="icon logo" alt="<?php echo $settings->business_name ?>">
                         <div class="logo-text">
                             <span class="logo-title">DOTA</span>
                             <span class="logo-subtitle">Dashboard</span>
@@ -59,6 +60,7 @@
                                 </li>
                             </ul>
                         </li>
+                        <?php if(false): ?>
                         <!-- Blog -->
                         <li>
                             <a class="show-cat-btn" href="##">
@@ -74,6 +76,9 @@
                                 </li>
                             </ul>
                         </li>
+                        <?php endif; ?>
+
+                        <?php if(false): ?>
                         <!-- Media -->
                         <li>
                             <a class="show-cat-btn" href="##">
@@ -92,12 +97,14 @@
                                 </li>
                             </ul>
                         </li>
+                        <?php endif; ?>
+
                     </ul>
                     <span class="system-menu__title">system</span>
                     <ul class="sidebar-body-menu">
                        <!-- Settings -->
                         <li>
-                            <a href="##"><span class="icon setting" aria-hidden="true"></span>Settings</a>
+                            <a href="<?php echo site_url("/admin/settings") ?>"><span class="icon setting" aria-hidden="true"></span>Settings</a>
                         </li>
                     </ul>
                 </div>

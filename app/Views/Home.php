@@ -12,15 +12,15 @@
 
     <div class="ws-home w-100" <?php content_from_right() ?>>
         <div class="overlay-bright"></div>
-        
+        <?php if(trim($settings->facebook) !== "" && trim($settings->instagram !== "")): ?>
         <div class="ws-home-social p-3 d-flex flex-column aling-items-center justify-content-between">
             <div class="p-0 my-3 w-100">
-                <a target="blank" href="http://www.facebook.com/dotauaeofficial">
+                <a target="blank" href="<?php echo $settings->facebook ?>">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
             </div>
             <div class="p-0 my-3 w-100">
-                <a target="blank" href="http://www.instagram.com/dotauaeofficial">
+                <a target="blank" href="<?php echo $settings->instagram ?>">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
@@ -30,9 +30,10 @@
                 </a>
             </div> -->
         </div>
+        <?php endif; ?>
 
         <div class="home-welcome d-flex flex-column justify-content-center aling-items-center m-0 p-0">
-            <img class="m-0" src="<?php echo base_url() ?>/assets/img/dota_logo.png" alt="">
+            <img class="m-0" src="<?php echo base_url()."/assets/uploads/".$settings->logo ?>" alt="">
         </div>
 
         <div class="fly-logo p-3 row m-0 justify-content-between">

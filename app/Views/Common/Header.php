@@ -12,6 +12,9 @@
     //     ]
     // );
 
+    $siteModel = model("App\Model\SiteModel");
+    $settings = $siteModel->get_settings()[0];
+
     if(is_null(get_cookie("language")))
     set_cookie("language" , "EN" , 3600);
 ?>
@@ -21,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="<?php echo base_url() ?>/assets/img/dota_icon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="<?php echo base_url()."/assets/uploads/".$settings->favicon ?>" type="image/png" sizes="16x16">
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/dota-css/index.css">
@@ -57,7 +60,7 @@
                 <input type="checkbox" id="check">
                 <div class="col-auto col-md-2 d-flex justify-content-start logo">
                     <a href="<?php echo base_url() ?>">
-                        <img class="m-0" src="<?php echo base_url() ?>/assets/img/dota_logo.png" alt="">
+                        <img class="m-0" src="<?php echo base_url()."/assets/uploads/".$settings->logo ?>" alt="">
                     </a>
                 </div>
                 

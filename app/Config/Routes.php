@@ -68,6 +68,7 @@ $routes->add('/admin/academies', 'admin\Dashboard::academies');
 $routes->add('/admin/account', 'admin\Dashboard::account');
 $routes->add('/admin/players/(:any)', 'admin\Dashboard::players/$1');
 $routes->add('/admin/players', 'admin\Dashboard::players');
+$routes->add('/admin/settings', 'admin\Dashboard::settings');
 
 // Admin Login
 $routes->add('/admin/login', 'admin\Login::index');

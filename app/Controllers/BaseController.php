@@ -10,6 +10,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
 use App\Models\UserModel;
+use App\Models\SiteModel;
 
 
 /**
@@ -56,7 +57,8 @@ abstract class BaseController extends Controller
 
         // Preload any models, libraries, etc, here.
             $this->session = \Config\Services::session();
-		   $this->userModel = new UserModel();
+		    $this->userModel = new UserModel();
+		    $this->siteModel = new SiteModel();
 		//    $this->orderModel = new OrderModel();
 		//    $this->productModel = new ProductModel();
 		//    $this->brandModel =new BrandModel();

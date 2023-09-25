@@ -4,17 +4,23 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    public $settings;
+    public function __construct(){
+
+        $this->settings = (model("App\Model\SiteModel"))->get_settings();
+    }
+
     public function index()
     {
         // return view('welcome_message');
         echo view('Common/Header' , ["page_title" => "VContact - Home"]);
-        echo view('Home');
+        echo view('Home' , ["settings" => $this->settings[0]]);
         echo view('Common/Footer');
     }
 
     public function contact_us(){
         echo view("Common/Header");
-        echo view("Common/Contactus");
+        echo view("Common/Contactus" , ["settings" => $this->settings[0]]);
         echo view("Common/Footer");
     }
 

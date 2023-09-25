@@ -95,9 +95,42 @@ class Dashboard extends BaseController{
         return $this->_example_output($output);
     }
 
+    public function settings(){
+        $session = session();
+        if(!$session->get("adminLoggedin"))
+        return redirect()->to(site_url("admin/login"));
+
+
+        $crud = $this->_getGroceryCrudEnterprise();
+        // $crud->setCsrfTokenName(csrf_token());
+        // $crud->setCsrfTokenValue(csrf_hash());
+        $crud->setTable('settings');
+        $crud->setSubject('Setting' , 'Settings');
+        $crud->columns(["business_name" , "address"  , "email" , "phone"]);
+        $crud->requiredFields(['business_name','address','phone','logo','favicon','email']);
+        $uploadValidations = [
+            'maxUploadSize' => '1M',
+            'minUploadSize' => '2K',
+            'allowedFileTypes' => [ 'jpeg', 'jpg', 'png' ]
+        ];
+        $crud->setFieldUpload('logo', 'assets/uploads', base_url() . '/assets/uploads' , $uploadValidations);
+        $crud->setFieldUpload('favicon', 'assets/uploads', base_url() . '/assets/uploads' , $uploadValidations);
+      
+        // $crud->editFields(["name" , "email" , "phone" , "password"]);
+
+        $crud->unsetAdd();
+        $crud->unsetDelete();
+        $crud->setRead();
+
+        $output = $crud->render();
+        // var_dump($academy);die();
+        return $this->_example_output($output);
+    }
+
 
     private function _example_output($output = null){
         // var_dump($output);die();
+        $settings = $this->siteModel->get_settings()[0];
         if ($output->isJSONResponse)
         {   
             header('Content-Type: application/json; charset=utf-8');
@@ -105,7 +138,7 @@ class Dashboard extends BaseController{
             exit;
         }
         // var_dump($output);
-        echo view('admin/Dashboard', (array)$output);
+        echo view('admin/Dashboard', array_merge((array)$output , ["settings" => $settings]));
     }
 
     private function _getDbData(){
