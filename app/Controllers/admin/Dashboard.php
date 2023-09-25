@@ -140,7 +140,7 @@ class Dashboard extends BaseController{
             exit;
         }
         // var_dump($output);
-        echo view('admin/Dashboard', array_merge((array)$output , ["settings" => $settings]));
+        echo view('admin/Dashboard', array_merge((array)$output , ["settings" => $this->settings]));
     }
 
     private function _getDbData(){
