@@ -8,11 +8,14 @@ use GroceryCrud\Core\GroceryCrud;
 class Dashboard extends BaseController{
 
 
+    public $settings;
     public function __construct(){
+
+        $this->settings = (model("App\Model\SiteModel"))->get_settings()[0];
     }
     
     public function index(){
-        echo view('admin/Dashboard');
+        echo view('admin/Dashboard' , ["settings" => $settings]);
     }
 
     public function academies(){
@@ -130,7 +133,6 @@ class Dashboard extends BaseController{
 
     private function _example_output($output = null){
         // var_dump($output);die();
-        $settings = $this->siteModel->get_settings()[0];
         if ($output->isJSONResponse)
         {   
             header('Content-Type: application/json; charset=utf-8');
