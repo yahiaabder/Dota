@@ -79,6 +79,10 @@ $routes->add('/admin/update_pwd/(:any)', 'admin\Login::updatepassword/$1');
 $routes->add('/admin/pwd/update/(:any)', 'admin\Login::updatepassword_form/$1');
 // $routes->add('/admin/dashboard', 'admin\Dashboard::index');
 
+// Blogs
+$routes->add('/blogs', 'Blogs::index');
+// Blogs
+
 
 // else:
 // $routes->add('(:any)', 'Under_maintenance::index');

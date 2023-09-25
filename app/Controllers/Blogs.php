@@ -2,11 +2,11 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController{
+class Blogs extends BaseController{
 
     public function index(){
         echo view("Common/Header");
-        echo view("Common/blogs/Blog_list");
+        echo view("blogs/Blog_list");
         echo view("Common/Footer");
     }
 
