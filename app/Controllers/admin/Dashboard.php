@@ -15,7 +15,7 @@ class Dashboard extends BaseController{
     }
     
     public function index(){
-        echo view('admin/Dashboard' , ["settings" => $settings]);
+        echo view('admin/Dashboard' , ["settings" => $this->settings]);
     }
 
     public function academies(){
