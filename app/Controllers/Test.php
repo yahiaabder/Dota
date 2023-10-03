@@ -10,7 +10,7 @@ class Test extends BaseController
             $subject = "Test from dota";
             $message = "Hello frol DOTA";
             $email = \Config\Services::email();
-            $email->setTo("yahia@3gelectronics.biz");
+            $email->setTo("");
             // $email->setCC("");
             $email->setFrom('info@dota.ae', 'DOTA');
             $email->setSubject($subject);
