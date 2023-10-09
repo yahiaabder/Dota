@@ -298,12 +298,12 @@
 
 
     <!-- general modal -->
+    <?php if($session->get("pop") || false): ?>
     <div class="modal fade" data-modal-autoshow="true" id="generalmodal" tabindex="-1" aria-labelledby="generalmodallabel" aria-hidden="false">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="row m-0 justify-content-center">
-                    <?php if($session->get("pop") || true): ?>
                         <div class="col-12 p-0 row m-0" <?php content_from_right() ?>>
                             <div class="col-12 p-3 rounded text-center d-flex align-items-start" style="max-height: auto; overflow: hidden;">
                                 <img src="<?php echo base_url() ?>/assets/img/registration_now_open.jpg" alt="" width="100%">
@@ -314,7 +314,6 @@
                                 </a>
                             </div>
                         </div>
-                    <?php endif; ?>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -323,4 +322,5 @@
             </div>
         </div>
     </div>
+    <?php endif; ?>
     <!-- general modal -->
